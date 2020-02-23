@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IDT-cz-rUq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="RVZ-fp-Ygv">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="IDT-cz-rUq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w2d-e5-ulH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UQ7-dZ-6Jc" kind="relationship" relationship="rootViewController" id="WvB-dw-Gwb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-jn-Mqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1730" y="18"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="V7Z-Ul-TNv">
+            <objects>
+                <viewController id="UQ7-dZ-6Jc" customClass="MenuVC" customModule="MyFirstGame" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOm-YW-u80">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sr8-2N-Ean">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="P56-if-Tyj">
+                                        <rect key="frame" x="158" y="165.5" width="59" height="336"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3t-25-2Fa">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                <state key="normal" title="2Players"/>
+                                                <connections>
+                                                    <action selector="Players:" destination="UQ7-dZ-6Jc" eventType="touchUpInside" id="fDe-Jr-kAA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dga-Qw-66z">
+                                                <rect key="frame" x="0.0" y="102" width="59" height="30"/>
+                                                <state key="normal" title="Easy"/>
+                                                <connections>
+                                                    <action selector="Easy:" destination="UQ7-dZ-6Jc" eventType="touchUpInside" id="2GF-D3-29d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P12-o3-bP4">
+                                                <rect key="frame" x="0.0" y="204" width="59" height="30"/>
+                                                <state key="normal" title="Medium"/>
+                                                <connections>
+                                                    <action selector="Medium:" destination="UQ7-dZ-6Jc" eventType="touchUpInside" id="dJA-QD-Hef"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2P4-hO-uNy">
+                                                <rect key="frame" x="0.0" y="306" width="59" height="30"/>
+                                                <state key="normal" title="Hard"/>
+                                                <connections>
+                                                    <action selector="Hard:" destination="UQ7-dZ-6Jc" eventType="touchUpInside" id="ej6-7l-j6Y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="QR7-r9-G7n"/>
+                                            <constraint firstAttribute="height" constant="336" id="dwe-mI-4HZ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="P56-if-Tyj" firstAttribute="centerY" secondItem="Sr8-2N-Ean" secondAttribute="centerY" id="3Gz-Hn-bEV"/>
+                                    <constraint firstItem="P56-if-Tyj" firstAttribute="centerX" secondItem="Sr8-2N-Ean" secondAttribute="centerX" id="3Zj-Ub-Uxg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sr8-2N-Ean" firstAttribute="bottom" secondItem="QoV-zq-5GB" secondAttribute="bottom" id="0cG-vQ-QcW"/>
+                            <constraint firstAttribute="trailing" secondItem="Sr8-2N-Ean" secondAttribute="trailing" id="FKK-B2-Z1H"/>
+                            <constraint firstItem="Sr8-2N-Ean" firstAttribute="leading" secondItem="TOm-YW-u80" secondAttribute="leading" id="FKd-Q4-E4k"/>
+                            <constraint firstItem="Sr8-2N-Ean" firstAttribute="top" secondItem="TOm-YW-u80" secondAttribute="top" id="uqP-Qc-zsP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QoV-zq-5GB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="svL-9G-Tsf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGj-bF-4GA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-850.39999999999998" y="26.53673163418291"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="gameVC" id="BV1-FR-VrT" customClass="GameViewController" customModule="MyFirstGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
